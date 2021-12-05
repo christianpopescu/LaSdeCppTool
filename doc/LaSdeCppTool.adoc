@@ -1,0 +1,27 @@
+= Light Agile  Software Development Engineer Tool Developed in C++
+Doc Writer <christian.popescu@outlook.com>
+v 1.0, 05/12/2021
+:toc:
+:toclevels: 5
+:sectnums:
+:pdf-page-size: A3
+
+== Introduction
+
+The purpose is to develop quickly a software development engineering tool base on different personal experiences.
+
+As a personal choice the tool will be developped in C++. But techniques and used tools could be used in Java or C# environment.
+
+The targeted OS is Windows.
+
+== Architecture elements
+
+Wrappers of different tools normally used on Software Development process (but not only) will be created.
+
+* Word
+* Excel
+* Outlook
+* Notes
+* Git
+* Svn
+* ...
