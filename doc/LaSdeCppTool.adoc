@@ -14,6 +14,11 @@ As a personal choice the tool will be developped in C++. But techniques and used
 
 The targeted OS is Windows.
 
+There are two objectives of this project:
+
+* Test some techniques, architecture, solutions, data structures.
+* Get some useful tools to help in development process (all phases, project management included).
+
 == Architecture elements
 
 Wrappers of different tools normally used on Software Development process (but not only) will be created.

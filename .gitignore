@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/src/SmallTools/OutlookKit/Debug
+Debug
+.vs
