@@ -4,13 +4,14 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
-
+#include <Shobjidl_core.h>
 
 HANDLE hStdin;
 VOID ErrorExit(LPSTR, DWORD);
 VOID KeyEventProc(KEY_EVENT_RECORD);
 VOID MouseEventProc(MOUSE_EVENT_RECORD);
 VOID ResizeEventProc(WINDOW_BUFFER_SIZE_RECORD);
+PWSTR LoadFile();
 
 bool test_ansi_code(int& value1)
 {
@@ -152,6 +153,8 @@ bool test_ansi_code(int& value1)
 int main()
 {
 	int value1;
+	CoInitialize(NULL);
+	LoadFile();
 	if (test_ansi_code(value1)) return value1;
 
 	return 0;
@@ -223,4 +226,40 @@ VOID ResizeEventProc(WINDOW_BUFFER_SIZE_RECORD wbsr)
 {
 	printf("Resize event\n");
 	printf("Console screen buffer is %d columns by %d rows.\n", wbsr.dwSize.X, wbsr.dwSize.Y);
+}
+
+PWSTR LoadFile() {
+	IFileOpenDialog* pFileOpen;
+	PWSTR pszFilePath = NULL;
+
+	// Create the FileOpenDialog object.
+	HRESULT hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL,
+		IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+	if (SUCCEEDED(hr))
+	{
+		//IShellItem *psiDocuments = NULL;
+		//hr = SHCreateItemInKnownFolder(FOLDERID_Documents, 0, NULL, IID_PPV_ARGS(&psiDocuments));
+
+		//if (SUCCEEDED(hr)) {
+		//	hr = pFileOpen->SetFolder(psiDocuments);
+		//	psiDocuments->Release();
+		//}
+		// Show the Open dialog box.
+		hr = pFileOpen->Show(NULL);
+
+		// Get the file name from the dialog box.
+		if (SUCCEEDED(hr))
+		{
+			IShellItem* pItem;
+			hr = pFileOpen->GetResult(&pItem);
+			if (SUCCEEDED(hr))
+			{
+				hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
+
+				pItem->Release();
+			}
+		}
+		pFileOpen->Release();
+	}
+	return pszFilePath;
 }
