@@ -1,6 +1,17 @@
 // FilesAndFolderKit.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+
+/*
+* This solution contains 3 pocs:
+*  - using ansi code
+*  - intercepting keybord
+*  - Reading file / folder
+*/
+
+// TODO: Refactor  code moving POC to separate class
+// TODO: Add class to rename files or folders
+
 #include <iostream>
 #include <string>
 #include <Windows.h>
@@ -73,6 +84,7 @@ bool test_ansi_code(int& value1)
 	std::cout << Size.X << std::endl;
 	std::cout << Size.Y << std::endl;
 	
+	std::cout << "Input string followed by <Enter> ";
 	std::string s;
 	std::cin >> s;
 	wprintf(L"\x1b[31mText 1.\r\n");
