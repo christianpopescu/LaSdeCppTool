@@ -116,7 +116,7 @@ bool test_ansi_code(int& value1)
 	LPSTR pS3 = const_cast<char*>(msg3.c_str());
 	if (hStdin == INVALID_HANDLE_VALUE)
 		ErrorExit(pS1, originalMode);
-	while (counter++ <= 100)
+	while (counter++ <= 50)
 	{
 		// Wait for the events.
 
