@@ -1,4 +1,5 @@
 #include "AppFrame.h"
+#include <wx/Panel.h>
 
 AppFrame::AppFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     : wxFrame(NULL, wxID_ANY, title, pos, size)
@@ -16,6 +17,8 @@ AppFrame::AppFrame(const wxString& title, const wxPoint& pos, const wxSize& size
     SetMenuBar(menuBar);
     CreateStatusBar();
     SetStatusText("Welcome to Files and Folders Kit!");
+    wxWindow* clientWindow =  new wxWindow(this, wxID_ANY);
+    
 }
 
 void AppFrame::OnHello(wxCommandEvent& event)
