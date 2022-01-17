@@ -1,4 +1,4 @@
-// FilesAndFolderKit.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// FilesAndFolderKit.cpp : This file contains the macro that starts the wxWidgets application. Program execution begins and ends there.
 //
 
 
@@ -9,9 +9,17 @@
 *  - Reading file / folder
 */
 
-// TODO: Refactor  code moving POC to separate class
-// TODO: Add class to rename files or folders
+#include <wx/wxprec.h>
+#ifndef WX_PRECOMP
+#include <wx/wx.h>
+#endif
 
+#include "UI/AppFrame.h"
+#include "UI/FilesAndFolderKitApp.h"
+
+wxIMPLEMENT_APP(MyApp);
+
+/*
 #include <iostream>
 #include <string>
 #include <Windows.h>
@@ -29,3 +37,4 @@ int main()
 	return 0;
 }
 
+*/

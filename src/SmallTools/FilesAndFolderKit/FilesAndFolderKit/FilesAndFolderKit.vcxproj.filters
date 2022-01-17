@@ -16,6 +16,9 @@
     <Filter Include="Poc">
       <UniqueIdentifier>{21f59bae-a428-43bd-af8a-8ea25fe9eab7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{683e3240-ae5f-467b-9e34-b01880575978}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FilesAndFolderKit.cpp">
@@ -24,10 +27,22 @@
     <ClCompile Include="Poc\Poc.cpp">
       <Filter>Poc</Filter>
     </ClCompile>
+    <ClCompile Include="UI\FilesAndFolderKitApp.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\AppFrame.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Poc\Poc.h">
       <Filter>Poc</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FilesAndFolderKitApp.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\AppFrame.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
