@@ -49,10 +49,11 @@ BOOL COutlookKitDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 
-	HTREEITEM hItem, hTeam;
+	HTREEITEM hItem, hTeam, hSubteam;
 	hItem = m_treeControl.InsertItem(L"Teams Listing", TVI_ROOT);
 	hTeam = m_treeControl.InsertItem(L"Teams 1", hItem);
 	hTeam = m_treeControl.InsertItem(L"Teams 2", hItem);
+	hSubteam = m_treeControl.InsertItem(L"Sub teams a", hTeam);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
