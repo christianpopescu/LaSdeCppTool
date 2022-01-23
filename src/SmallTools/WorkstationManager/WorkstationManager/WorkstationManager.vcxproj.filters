@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{6a8ba0b6-eb77-47e8-a45a-05281283d6bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -21,10 +24,28 @@
     <ClCompile Include="WorkstationManagerApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="config\ConfigSettingsManaged.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\ConfigManager.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\ConfigSettingsNative.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ConfigSettingsManaged.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ConfigManager.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ConfigSettingsNative.h">
+      <Filter>Config</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
